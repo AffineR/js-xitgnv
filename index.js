@@ -1,6 +1,9 @@
-// Import stylesheets
-import './style.css';
+var express = require('express');
+var router = express.Router();
 
-// Write Javascript code!
-const appDiv = document.getElementById('app');
-appDiv.innerHTML = `<h1>JS Starter</h1>`;
+/* GET home page. */
+router.get('/', function(req, res) {
+  res.render('index', { title: 'DevOps Tutorial App' });
+});
+
+module.exports = router;
